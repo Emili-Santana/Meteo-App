@@ -83,6 +83,7 @@ body {
 }
 #other_infos div:hover {
   transform: scale(1.1);
+  opacity: 90%;
 }
 #infos {
   margin-top: 30px;
