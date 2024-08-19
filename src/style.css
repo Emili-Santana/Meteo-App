@@ -5,11 +5,18 @@ body {
 }
 
 .weather-app {
-  background: blueviolet;
-  max-width: 500;
+  background: radial-gradient(
+    circle at 48.7% 44.3%,
+    rgb(30, 144, 231) 0%,
+    rgb(56, 113, 209) 22.9%,
+    rgb(38, 76, 140) 76.7%,
+    rgb(31, 63, 116) 100.2%
+  );
+  max-width: 300;
   margin: 60px auto;
   padding: 30px;
   border-radius: 10px;
+  color: white;
 }
 
 .search-input {
@@ -25,7 +32,7 @@ body {
 .search-button {
   margin-left: 5px;
   font-size: 16px;
-  background-color: #885df1;
+  background: linear-gradient(90deg, #1e3d92, #606dde);
   color: white;
   border: none;
   padding: 20px;
@@ -42,38 +49,48 @@ body {
   text-align: center;
   margin-bottom: 5px;
   font-weight: 600;
-  color: #372f3f;
-
+  color: white;
 }
 #temp {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px;
-    background: linear-gradient(90deg, #5a7cdc, #606dde);
-    color: #fff;
-    border-radius: 20px;
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  background: linear-gradient(90deg, #1e3d92, #606dde);
+  color: #fff;
+  border-radius: 20px;
+  padding: 20px;
 }
 
 #temp_img {
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
 }
 
 #temp_value {
-    font-weight: bold;
-    font-size: 50px;
-    line-height: 55px;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 55px;
 }
 #other_infos {
   margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background: linear-gradient(90deg, #1e3d92, #606dde);
+  border-radius: 20px;
+  text-align: center;
+}
+#other_infos div:hover {
+  transform: scale(1.1);
 }
 #infos {
   margin-top: 30px;
   display: grid;
-  grid grid-row: 1fr;
+  grid-row: 1fr;
   gap: 12px;
+}
+
+footer {
+  background: linear-gradient(90deg, #1e3d92, #606dde);
 }
