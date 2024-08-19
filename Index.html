@@ -10,19 +10,66 @@
 </head>
 
 <body>
-    <h1>Hello</h1>
-    <script src="src/app.js"></script>
-    <footer>
+    <div class="weather-app">
+        <header>
+            <form id="search">
+
+                <input type="search" name="city_name" id="city_name" placeholder="Enter the city" required
+                    class="search-input">
+                <input type="submit" value="Search" class="search-button" />
+            </form>
+
+            <div id="weather">
+                <h1 id="title">Rolante, BR</h1>
+
+                <div id="infos">
+                    <div id="temp">
+                        <img id="temp_img" src="http://openweathermap.org/img/wn/04d@2x.png" alt="">
+
+                        <div>
+                            <p id="temp_value">
+                                32°C
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div id="other_infos">
+                        <div>
+                            <h2 class="temp_description">Description</h2>
+                            <p id="temp_description">Ensolarado</p>
+                        </div>
+
+                        <div>
+                            <h2>Humidity</h2>
+                            <p id="humidity">50%</p>
+                        </div>
+
+                        <div>
+                            <h2>Wind</h2>
+                            <p id="wind">50%</p>
+                        </div>
+
+                        <div>
+                            <h2>Time</h2>
+                            <p id="time">19:21</p>
+                        </div>
+                    </div>
+        </header>
+        <script src="src/app.js">
+        </script>
         <footer>
-            <p>
-                This project was coded by
-                <a href="https://github.com/Emili-Santana" target="_blank">💜Emili Gusmão 💜</a> and is
-                <a href="https://github.com/Emili-Santana/Meteo-App" target="_blank">
-                    on GitHub</a>
-                and
-                <a href="https://meteoapp-emili.netlify.app/" target="_blank">hosted on Netlify</a>
-            </p>
-        </footer>
+            <footer>
+                <p>
+                    This project was coded by
+                    <a href="https://github.com/Emili-Santana" target="_blank">💜Emili Gusmão 💜</a> and is
+                    <a href="https://github.com/Emili-Santana/Meteo-App" target="_blank">
+                        on GitHub</a>
+                    and
+                    <a href="https://meteoapp-emili.netlify.app/" target="_blank">hosted on Netlify</a>
+                </p>
+            </footer>
+    </div>
 </body>
 
 </html>
