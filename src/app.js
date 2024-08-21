@@ -36,7 +36,6 @@ function formatDate(date) {
 
 let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
-console.log(currentDateELement);
 
 //call the funtion search
 let searchForm = document.querySelector("#search-form");
