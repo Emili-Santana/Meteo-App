@@ -50,7 +50,7 @@ function displayTemperature(response) {
   let minimum = Math.round(response.data.temperature.minimum);
   let maximum = Math.round(response.data.temperature.maximum);
   let description = response.data.condition.description;
-  let icon = response.data.condition.icon_url;
+  let iconElement = document.querySelector("#temp_img");
   let humidity = Math.round(response.data.temperature.humidity);
   let wind = Math.round(response.data.wind.speed);
   let city = response.data.city;
@@ -59,6 +59,8 @@ function displayTemperature(response) {
   let valueElement = document.querySelector("#value");
   valueElement.innerHTML = `${temperature}°C`;
   console.log(valueElement);
+
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" id="temp_img" />`;
 
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = `${description}`;
