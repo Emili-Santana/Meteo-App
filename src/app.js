@@ -47,6 +47,8 @@ currentDateELement.innerHTML = formatDate(currentDate);
 //Current Temperature
 function displayTemperature(response) {
   let temperature = Math.round(response.data.temperature.current);
+  let minimum = Math.round(response.data.temperature.minimum);
+  let maximum = Math.round(response.data.temperature.maximum);
   let description = response.data.condition.description;
   let icon = response.data.condition.icon_url;
   let humidity = Math.round(response.data.temperature.humidity);
