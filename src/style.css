@@ -50,6 +50,7 @@ body {
   margin-bottom: 5px;
   font-weight: 600;
   color: white;
+  font-size: 40px;
 }
 #temp {
   display: flex;
@@ -59,7 +60,7 @@ body {
   background: linear-gradient(90deg, #1e3d92, #606dde);
   color: white;
   border-radius: 20px;
-  padding: 20px;
+  padding: 8px;
 }
 #temp :hover {
   transform: scale(1.1);
@@ -76,15 +77,19 @@ body {
   line-height: 55px;
   text-align: right;
 }
+
+#description {
+  font-size: 22px;
+}
 #other_infos {
   margin-top: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  grid-auto-rows: minmax(30px, auto);
+  gap: 8px;
   transition: transform 0.3s ease, background-color 0.3s ease;
   background: linear-gradient(90deg, #1e3d92, #606dde);
   border-radius: 20px;
   text-align: center;
+  padding: 5px;
 }
 #other_infos div:hover {
   transform: scale(1.1);
