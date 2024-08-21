@@ -12,7 +12,7 @@ body {
     rgb(38, 76, 140) 76.7%,
     rgb(31, 63, 116) 100.2%
   );
-  max-width: 300;
+  max-width: 400px;
   margin: 60px auto;
   padding: 30px;
   border-radius: 10px;
@@ -45,7 +45,7 @@ body {
   cursor: pointer;
 }
 
-#title {
+#current-city {
   text-align: center;
   margin-bottom: 5px;
   font-weight: 600;
@@ -54,12 +54,16 @@ body {
 #temp {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   gap: 20px;
   background: linear-gradient(90deg, #1e3d92, #606dde);
-  color: #fff;
+  color: white;
   border-radius: 20px;
   padding: 20px;
+}
+#temp :hover {
+  transform: scale(1.1);
+  opacity: 90%;
 }
 
 #temp_img {
@@ -70,6 +74,7 @@ body {
   font-weight: bold;
   font-size: 50px;
   line-height: 55px;
+  text-align: right;
 }
 #other_infos {
   margin-top: 30px;
