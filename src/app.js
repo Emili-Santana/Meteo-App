@@ -6,7 +6,7 @@ function search(event) {
   cityElement.innerHTML = searchInputElement.value;
 }
 
-// time and date
+// time and day
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
@@ -36,6 +36,11 @@ function formatDate(date) {
 
 let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
+console.log(currentDateELement);
+
+//call the funtion search
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", search);
 
 currentDateELement.innerHTML = formatDate(currentDate);
 
@@ -47,9 +52,10 @@ function displayTemperature(response) {
   let humidity = Math.round(response.data.temperature.humidity);
   let wind = Math.round(response.data.wind.speed);
   let city = response.data.city;
+  let country = response.data.country;
 
   let valueElement = document.querySelector("#value");
-  valueElement.innerHTML = `${temperature}`;
+  valueElement.innerHTML = `${temperature}°C`;
   console.log(valueElement);
 
   let descriptionElement = document.querySelector("#description");
@@ -61,10 +67,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = `${wind}km/h`;
 }
-
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
-
+//function will be called when the form is submitted, and will get the city entered by the user
 function searchCity(event) {
   event.preventDefault();
   let city = document.querySelector("#search-input").value.trim();
@@ -72,5 +75,8 @@ function searchCity(event) {
   let apiKey = "co1932ee5cba3475f06de51eb085140t";
 
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
   axios.get(apiUrl).then(displayTemperature);
 }
+let cityForm = document.querySelector("#search-form");
+cityForm.addEventListener("submit", searchCity);
